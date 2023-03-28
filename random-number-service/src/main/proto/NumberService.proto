@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package examplekubecluster.randomnumberservice;
+
+message NumberRequest {
+  int32 upperBound = 1;
+}
+
+message NumberResponse {
+  int32 number = 1;
+}
+
+service NumberService {
+  rpc randomNumber(NumberRequest) returns (NumberResponse);
+}
